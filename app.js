@@ -6,6 +6,7 @@ const port = 3000;
 app.set('view engine', 'pug');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
+app.use(express.static(__dirname + '/css'));
 
 app.use('/', require('./routes'))
 
